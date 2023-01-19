@@ -1,1 +1,18 @@
-s
+{
+  "id": 2,
+  "category": {
+    "id": 2,
+    "name": "string"
+  },
+  "name": "cat",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 2,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}

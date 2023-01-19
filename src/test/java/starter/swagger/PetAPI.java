@@ -22,4 +22,30 @@ public class PetAPI {
         SerenityRest.given().contentType(ContentType.JSON).body(json);
     }
 
+    @Step("Post update pet with form data")
+    public void setPostUpdatePet(String petId, String name, String status){
+        SerenityRest.given()
+                    .pathParam("petId",petId)
+                    .contentType(ContentType.URLENC)
+                    .formParam("name",name)
+                    .formParam("status",status);
+    }
+
+    @Step("Post upload an image")
+    public void setPostImagePet(String petId,String metadata,File image){
+        SerenityRest.given()
+                    .pathParam("petId",petId)
+                    .contentType("multipart/form-data")
+                    .multiPart("additionalMetadata",metadata)
+                    .multiPart("file",image);
+    }
+
+    @Step("Post upload an image without file")
+    public void setPostImagePetWithoutFile(String petId,String metadata){
+        SerenityRest.given()
+                .pathParam("petId",petId)
+                .contentType("multipart/form-data")
+                .multiPart("additionalMetadata",metadata);
+    }
+
 }
