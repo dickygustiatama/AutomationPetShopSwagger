@@ -1,5 +1,6 @@
 package starter.swagger;
 
+import io.cucumber.java.eo.Se;
 import io.restassured.http.ContentType;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
@@ -30,6 +31,13 @@ public class UserAPI {
     @Step("Delete user")
     public void setDeleteUser(String username){
         SerenityRest.given().pathParam("username",username);
+    }
+
+    @Step("Get login user")
+    public void setGetUserLogin(File json){
+        SerenityRest.given()
+                    .contentType(ContentType.JSON)
+                    .body(json);
     }
 }
 
