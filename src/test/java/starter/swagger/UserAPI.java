@@ -39,6 +39,11 @@ public class UserAPI {
                     .contentType(ContentType.JSON)
                     .body(json);
     }
+
+    @Step("Get logout user")
+    public void setGetUserLogout(){
+        SerenityRest.given();
+    }
 }
 
 
