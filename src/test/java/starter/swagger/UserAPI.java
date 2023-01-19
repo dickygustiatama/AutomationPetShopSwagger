@@ -26,6 +26,11 @@ public class UserAPI {
                     .contentType(ContentType.JSON)
                     .body(json);
     }
+
+    @Step("Delete user")
+    public void setDeleteUser(String username){
+        SerenityRest.given().pathParam("username",username);
+    }
 }
 
 
