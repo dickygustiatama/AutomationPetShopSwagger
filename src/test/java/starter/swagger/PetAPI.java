@@ -16,7 +16,7 @@ public class PetAPI {
     public static String GET_PET_STATUS = Constant.BASE_URL+"/pet/findByStatus?status={status}";
     public static String GET_PET_ID = Constant.BASE_URL+"/pet/{id}";
     public static String GET_PET_NULL_ID = Constant.BASE_URL+"/pet/";
-    public static String POST_UPDATE_PET = Constant.BASE_URL+"/pet/{id}" ;
+    public static String POST_UPDATE_PET = Constant.BASE_URL+"/pet/{petId}" ;
     public static String DELETE_PET_ID = Constant.BASE_URL+"/pet/{id}" ;
 
     @Step("Post new pet")
@@ -56,7 +56,7 @@ public class PetAPI {
     public void setPostUpdatePet(String petId, String name, String status){
         SerenityRest.given()
                     .pathParam("petId",petId)
-                    .contentType(ContentType.URLENC)
+                    .contentType("application/x-www-form-urlencoded; charset=utf-8")
                     .formParam("name",name)
                     .formParam("status",status);
     }
