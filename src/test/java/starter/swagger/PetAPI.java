@@ -52,13 +52,6 @@ public class PetAPI {
 
     @Step("Post update pet with form data")
 
-    public void setPostUpdatePet(String id, String name, String status){
-        SerenityRest.given().
-                pathParams("id",id)
-                .contentType("application/x-www-form-urlencoded; charset=utf-8")
-                .formParam("name",name)
-                .formParam("status",status);
-    }
 
     public void setPostUpdatePet(String petId, String name, String status){
         SerenityRest.given()

@@ -18,7 +18,7 @@ public class UpdatePetWithFormData {
     @Steps
     PetAPI petAPI;
 
-    @Given("Base URL for update pet with valid parameter {string}, name as {string} and status as {string}")
+    @Given("Base URL for update pet with valid parameter {String}, name as {string} and status as {string}")
     public void baseURLForUpdatePetWithValidParameterAndForm(String petId, String name, String status) {
         petAPI.setPostUpdatePet(petId,name,status);
     }
