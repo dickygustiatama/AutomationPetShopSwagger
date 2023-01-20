@@ -4,6 +4,7 @@ import io.cucumber.java.eo.Se;
 import io.restassured.http.ContentType;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
+import net.thucydides.core.annotations.Steps;
 import starter.swagger.Utils.Constant;
 
 import java.io.File;
@@ -43,6 +44,20 @@ public class UserAPI {
     @Step("Get logout user")
     public void setGetUserLogout(){
         SerenityRest.given();
+    }
+
+    @Step("Post create user with array")
+    public void postCreateUserWithArray(File json) {
+        SerenityRest.given()
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+
+    @Step("Post create list of user")
+    public void postCreateListOfUser(File json) {
+        SerenityRest.given()
+                .contentType(ContentType.JSON)
+                .body(json);
     }
 }
 
