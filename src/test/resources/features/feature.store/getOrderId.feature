@@ -1,5 +1,5 @@
 Feature: Testing Swagger petStore API GET Purchase Order
-  @Tugas
+  @Swagger
   Scenario Outline: get order with valid id
     Given get order with valid id "<id>"
     When Send request get order
@@ -11,7 +11,7 @@ Feature: Testing Swagger petStore API GET Purchase Order
       | 2  |
       | 3  |
 
-  @Tugas
+  @Swagger
   Scenario Outline: get order with invalid id
     Given get order with invalid id "<id>"
     When Send request get order
@@ -22,7 +22,7 @@ Feature: Testing Swagger petStore API GET Purchase Order
       | #& |
       | ab |
 
-  @Tugas
+  @Swagger
   Scenario Outline: get order with invalid id
     Given get order with invalid id "<id>"
     When Send request get order
