@@ -1,7 +1,6 @@
 {
-  "id": 2,
   "category": {
-    "id": 2,
+
     "name": "string"
   },
   "name": "cat",
@@ -10,7 +9,7 @@
   ],
   "tags": [
     {
-      "id": 2,
+
       "name": "string"
     }
   ],
