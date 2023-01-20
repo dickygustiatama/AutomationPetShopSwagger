@@ -1,0 +1,18 @@
+{
+  "id": dg$2,
+  "category": {
+    "id": 2,
+    "name": "string"
+  },
+  "name": "kucingg",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 2,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}
