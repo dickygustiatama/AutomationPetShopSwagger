@@ -27,10 +27,10 @@ public class NewPetStepDef {
         SerenityRest.when().post(PetAPI.POST_NEW_PET) ;
     }
 
-    @Then("Should return status code {int}")
-    public void shouldReturnStatusCode(int statusCode) {
-        SerenityRest.then().statusCode(statusCode);
-    }
+//    @Then("Should return status code {int}")
+//    public void shouldReturnStatusCode(int statusCode) {
+//        SerenityRest.then().statusCode(statusCode);
+//    }
 
     @And("Validate json schema create new pet")
     public void validateJsonSchemaCreateNewPet() {
