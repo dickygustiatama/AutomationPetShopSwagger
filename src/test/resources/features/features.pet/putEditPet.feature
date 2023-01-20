@@ -4,7 +4,7 @@ Feature: Put update pet
     Given Put update pet with valid id
     When Send request put update pet by ID
     Then Should return status code 200
-    And Validate json schema update pet
+    And Validate json schema update pet ID
 
   @Swagger @Negative
     Scenario: Update pet with invalid ID

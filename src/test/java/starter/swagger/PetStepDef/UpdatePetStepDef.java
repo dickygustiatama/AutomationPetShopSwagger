@@ -27,11 +27,6 @@ public class UpdatePetStepDef {
         SerenityRest.when().put(PetAPI.PUT_UPDATE_PET);
     }
 
-    @And("Validate json schema update pet")
-    public void validateJsonSchemaUpdatePet() {
-        File jsonSchema = new File(Constant.JSON_SCHEMA+"/PetSchema/PutUpdatePetSchema.json");
-        SerenityRest.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(jsonSchema)) ;
-    }
 
     @Given("Put update pet with invalid ID")
     public void putUpdatePetWithInvalidID() {
@@ -43,5 +38,11 @@ public class UpdatePetStepDef {
     public void putUpdatePetWithUnregisteredID() {
         File json = new File(Constant.JSON_REQUEST+"/Pet/updateUnregisteredId.json");
         petAPI.putUpdatePet(json);
+    }
+
+    @And("Validate json schema update pet ID")
+    public void validateJsonSchemaUpdatePetID() {
+        File jsonSchema = new File(Constant.JSON_SCHEMA+"/PetSchema/PutUpdatePetSchema.json");
+       SerenityRest.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(jsonSchema)) ;
     }
 }

@@ -18,10 +18,10 @@ public class UpdatePetWithFormData {
     @Steps
     PetAPI petAPI;
 
-    @Given("Base URL for update pet with valid parameter {string}, name as {string} and status as {string}")
-    public void baseURLForUpdatePetWithValidParameterAndForm(String petId, String name, String status) {
-        petAPI.setPostUpdatePet(petId,name,status);
-    }
+    //    @Given("Base URL for update pet with valid parameter {String}, name as {string} and status as {string}")
+//    public void baseURLForUpdatePetWithValidParameterAndForm(String petId, String name, String status) {
+//        petAPI.setPostUpdatePet(petId,name,status);
+//    }
 
     @When("Send request post update pet")
     public void sendRequestPostUpdatePet() {
@@ -30,7 +30,7 @@ public class UpdatePetWithFormData {
 
     @And("Response body message should be the same as id {string}")
     public void responseBodyMessageShouldBeTheSameAsId(String id) {
-        SerenityRest.then().body(SwaggerResponses.MESSAGE,equalTo(id));
+        SerenityRest.then().body(SwaggerResponses.MESSAGE, equalTo(id));
     }
 
     @And("Validate json schema update pet")
@@ -39,4 +39,9 @@ public class UpdatePetWithFormData {
         SerenityRest.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(jsonSchema));
     }
 
+
+    @Given("Base URL for update with parameter {string}, name as {string} ,status as {string}")
+    public void baseURLForUpdateWithParameterNameAsStatusAs(String petId, String name, String status) {
+        petAPI.setPostUpdatePet(petId,name,status);
+    }
 }
