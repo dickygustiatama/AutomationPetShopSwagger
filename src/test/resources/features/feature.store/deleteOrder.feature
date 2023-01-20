@@ -1,5 +1,5 @@
 Feature: Testing Swagger petStore API DELETE Purchase Order
-  @Tugas
+  @Swagger
     Scenario Outline: Delete order with valid id
       Given delete order with valid id "<id>"
       When Send request delete order
@@ -10,7 +10,7 @@ Feature: Testing Swagger petStore API DELETE Purchase Order
     |  2 |
     |   3 |
 
-  @Tugas
+  @Swagger
   Scenario Outline: Delete order with invalid id
     Given delete order with invalid id "<id>"
     When Send request delete order
