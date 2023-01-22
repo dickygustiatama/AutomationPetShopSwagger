@@ -1,10 +1,10 @@
 Feature: Testing Petstore Swagger API for endpoint Create a User
-  @Swagger
+  @Swagge
   Scenario: Post create user with valid and complete body
     Given Base URL for create a user with valid and complete body
     When Send request post create a user
     Then Should return status code 200
-    And Response message body should be the same as "3"
+    And Response message body should be the same as "4"
     And Validate json schema place an order
 
   @Swagger

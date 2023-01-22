@@ -53,12 +53,25 @@ public class UserAPI {
                 .body(json);
     }
 
+    @Step("Get user find by username")
+    public void getUserFindByUsername(String username) {
+        SerenityRest.given().pathParam("username", username);
+    }
+
+    @Step("Put update user")
+    public void putUpdateUser(String username, File json) {
+        SerenityRest.given()
+                .pathParam("username", username)
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+
+
     @Step("Post create list of user")
     public void postCreateListOfUser(File json) {
         SerenityRest.given()
                 .contentType(ContentType.JSON)
                 .body(json);
     }
+
 }
-
-
