@@ -1,8 +1,6 @@
 
 package starter.swagger.UserStepDef;
 
-package StepDef;
-
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -109,5 +107,4 @@ public class CreateUserWithArrayStepDef {
 
 }
 
-}
 
