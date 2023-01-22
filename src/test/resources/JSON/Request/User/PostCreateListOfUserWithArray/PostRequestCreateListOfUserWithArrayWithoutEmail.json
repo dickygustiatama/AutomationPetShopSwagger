@@ -1,0 +1,12 @@
+[
+  {
+    "id": 0,
+    "username": "tama",
+    "firstName": "Dicky",
+    "lastName": "Gustiatama",
+
+    "password": "12345",
+    "phone": "081208120812",
+    "userStatus": 0
+  }
+]
