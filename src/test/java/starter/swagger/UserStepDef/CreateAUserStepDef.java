@@ -30,11 +30,6 @@ public class CreateAUserStepDef {
         SerenityRest.when().post(UserAPI.POST_CREATE_USER);
     }
 
-    @Then("Should return status code {int}")
-    public void shouldReturnStatusCode(int code) {
-        SerenityRest.then().statusCode(code);
-    }
-
     @And("Response message body should be the same as {string}")
     public void responseBodyShouldBeTheSame(String id) {
         SerenityRest.then().body(SwaggerResponses.MESSAGE,equalTo(id));
